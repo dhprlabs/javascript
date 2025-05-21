@@ -42,3 +42,38 @@ for (let index = 0; index < 10; index++) {
         console.log("odd");
     }
 }
+
+// while loop
+console.log();
+console.log("while loop :");
+
+idx = 0
+
+while (idx <= 10) {
+    if (idx % 2 == 0) {
+        console.log(idx);
+        idx++;
+    }
+    else {
+        idx++;
+    }
+}
+
+let ary = ["flash", "superman", "batman"]
+i = 0
+
+while (i < ary.length) {
+    console.log(ary[i]);
+    i++;
+}
+
+// do-while loop
+console.log();
+console.log("do-while loop :");
+
+let score = 12
+
+do {
+    console.log(score);
+    score++
+} while (score <= 10);
