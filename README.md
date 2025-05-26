@@ -1,4 +1,4 @@
-# JavaScript Tutorials
+## JavaScript Tutorials
 
 Welcome to my **JavaScript learning journey!**
 
