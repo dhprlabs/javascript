@@ -1,0 +1,26 @@
+DOM Manipulation :  
+
+# there are so many selectors and attributes to manipulate dom elements.
+
+getElementById
+getElementByclassName
+
+style
+
+getAttribute()
+setAttribute()
+
+innerHTML
+textContent 
+innerText 
+
+querySelector()
+querySelectorAll()
+
+# remember that nodelist and htmlcollection are not same as arrays.
+# when we get a nodelist, we simply can't just manipulate every element in it.
+# we need to specify like list[i] in order to manipulate the element.
+
+# convert htmlcollection to array
+# Array.from()
+
