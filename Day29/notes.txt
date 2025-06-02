@@ -1,0 +1,16 @@
+# so, here i have created an unordered list. 
+  i have listed 2 languages in it.
+  now, let's add a new list item in the list.
+
+# to add an item to the list, we will create a function.
+  after that, using querySelector, we will append it in our list.
+
+# now, i will write an optimized version of what i just did before.
+
+# let's say i want to select second list item and edit it.
+  i will now write a function for that.
+  i will use replaceWith() in order to edit the element.
+  another way to edit is to use outerHTML in which we need to provide it 
+  the whole html.
+
+# at last if i want to remove an element, i will use the remove().
