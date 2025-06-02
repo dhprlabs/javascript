@@ -1,5 +1,3 @@
-DOM Manipulation :  
-
 # there are so many selectors and attributes to manipulate dom elements.
 
 getElementById
