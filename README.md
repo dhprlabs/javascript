@@ -1,6 +1,6 @@
 # JavaScript 
 
-Welcome to my **JavaScript learning journey!**
+Welcome to my JavaScript learning journey!
 
 This repository is where I’m documenting everything I learn as I explore the world of JavaScript. Whether you're a fellow beginner, someone revisiting the language, or just curious about how JavaScript works, I hope this collection of notes, code snippets, and mini-projects can help you too.
 
