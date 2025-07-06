@@ -1,6 +1,6 @@
 # JavaScript 
 
-Welcome to my JavaScript learning journey!
+Welcome to my JavaScript learning journey !
 
 This repository is where I’m documenting everything I learn as I explore the world of JavaScript. Whether you're a fellow beginner, someone revisiting the language, or just curious about how JavaScript works, I hope this collection of notes, code snippets, and mini-projects can help you too.
 
@@ -20,11 +20,8 @@ Instead of just reading or watching content passively, I focus on writing code, 
 
 ### How It’s Organized
 
-- The repository is organized by day (e.g., `Day 01`, `Day 02`, etc.).
-- Each folder includes:
-  - JavaScript code from that day's practice or lesson
-  - Notes summarizing key concepts
-  - Optional mini-projects or exercises to reinforce learning
+- The repository is organized on basis of topic names that I have learnt.
+- There is a `Projects` folder which contains all my mini projects that I have built.
 
 ## Why I’m Doing This
 
