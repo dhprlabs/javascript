@@ -1,4 +1,21 @@
 /*
+alert(3 + 3) We are using nodejs, so this will give error in terminal 
+we have the following datatypes : string, number, bigint, boolean, symbol, object
+*/
+
+let userName = "alexa"
+let isLogged = false
+let num = 33921
+let state;
+let z = null
+
+console.log(typeof state);
+console.log(typeof z);
+console.log(isLogged);
+console.log(typeof userName);
+console.log(typeof num);
+
+/*
 Here, we will briefly see about datatypes in javascript.
 There are mainly 2 datatypes : primitive and non-primitive / refrence.
 
