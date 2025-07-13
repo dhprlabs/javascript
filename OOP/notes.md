@@ -12,8 +12,8 @@
 
 ### Why OOP ? 
 
-- Code was getting messier
-- Spagetti code 
+- Code was getting messy
+- Spaghetti code 
 - So, to structure the code OOP was used
 
 ### Objects 
