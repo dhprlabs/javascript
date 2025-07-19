@@ -38,3 +38,25 @@
 - Encapsulation
 - Inheritance
 
+### Classes
+
+- Classes in javascript were introduced from ES6
+- Syntax is same as any other language
+- There is constructor, methods, etc.
+
+### Behind the scene code
+
+- Remember the prototype in function
+- Functions are objects only
+- So, we can make a function first
+- Then, add some methods in prototype 
+
+### Inheritance 
+
+- Using other class properties and methods
+- Parent and child concept
+
+### Static methods
+
+- Some methods are bound to be used to system only
+- No instance of a class should be allowed to use it
