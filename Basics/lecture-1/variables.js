@@ -1,8 +1,3 @@
-/*
-Here, we will see about various variables like let, const, var.
-We prefer to use let & const instead of var.
-Reason is the issue in early javascript of block scope & functional scope.
-*/
 
 const accountId = 7622910192
 let accountEmail = "proficiencyhub@mail.com"
