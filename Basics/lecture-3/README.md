@@ -9,17 +9,27 @@
 - Here are some conversions: 
 
 1. "33" => 33
+
 2. "33abc" => NaN
+
 3. null => 0
+
 4. undefined => NaN
+
 5. true => 1
 
 - Here are some more conversions:
 
 1. -23 => true
+
 2. 41 => true
+
 3. 0 => false
+
 4. undefined => false
+
 5. null => false
+
 6. "" => false
+
 7. "physics" => true

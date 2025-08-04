@@ -24,6 +24,7 @@ console.log(null > 0);
 
 /* Let's check the === operator which compares the datatype also. */
 console.log("\nsimple comparisions using === operator");
+console.log(null === Object);
 console.log(null === 0);
 console.log("1" === 1);
 console.log(2 < 1);
