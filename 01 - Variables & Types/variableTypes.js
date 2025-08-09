@@ -6,7 +6,7 @@ let z = null
 
 console.log(typeof state);
 console.log(typeof z);
-console.log(isLogged);
+console.log(typeof isLogged);
 console.log(typeof userName);
 console.log(typeof num);
 
@@ -21,7 +21,7 @@ const homeId = Symbol('342')
 
 console.log(collegeId === homeId);
 
-/* All non-primitive types have object as their return type */
+// All non-primitive types have object as their return type 
 const fields = ["aerospace", "electronics", "instrument", "computer"]
 
 let playerObj = {
