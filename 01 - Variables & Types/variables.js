@@ -1,4 +1,3 @@
-
 const accountId = 7622910192
 let accountEmail = "proficiencyhub@mail.com"
 var accountPassword = "1995"
