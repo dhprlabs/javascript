@@ -1,13 +1,33 @@
-## Comparisions 
+## Comparisons
 
-- Comparing two things in javascript codes is a normal thing.
+- **Common task**: Comparing two values happens often in JavaScript.
 
-- But there are some cases where things get a bit confusing.
+- **Potential confusion**: Different operators (`==` vs `===`) behave differently, especially with type conversion.
 
-- Hence, now-a-days `typescript` is prefered more.
+- **TypeScript preference**: Many developers use TypeScript to avoid type-related comparison issues.
 
-- It is important to know the difference between `==` and `===` operator.
+### `==` (Double Equals)
 
-- Double equals `==` will perform a type conversion when comparing two things, and will handle `NaN`, `-0`, and `+0` specially to conform to IEEE 754 (so `NaN != NaN`, and `-0 == +0`).
+- Performs **type conversion** before comparison.
 
-- Triple equals `===` will do the same comparison as double equals (including the special handling for `NaN`, `-0`, and `+0`) but without type conversion; if the types differ, `false` is returned.
+- Special handling for:
+
+    - `NaN` → `NaN != NaN`
+
+    - `-0` and `+0` → considered equal
+
+- May lead to unexpected results due to implicit conversions.
+
+### `===` (Triple Equals)
+
+- **Strict comparison** → no type conversion.
+
+- Returns `false` if types differ.
+
+- Still has the same special handling for:
+
+    - `NaN` (always not equal to itself)
+
+    - `-0` and `+0` (considered equal)
+
+**Best Practice**: Prefer `===` for predictable behavior.

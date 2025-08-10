@@ -1,11 +1,39 @@
-## Conversions
+## Conversions 
 
-- It is important to know what value will the variable get if you try to convert it to other datatype.
+### Why Conversion Matters
 
-- Assume, you have to convert a `String` into an `Integer`. 
+- When converting between types (string → number, boolean → number, etc.), JavaScript may **implicitly** or **explicitly** change the value.
 
-- For example, I have `"33"` and I want to convert it into `Integer`, then will `"33"` will have the same value during conversion of will it have some other value.
+- Always check what the actual result will be after conversion, because it might **not** be what you expect.
 
-- In the code, I have converted every other datatype to `Integer` to see what are the results.
+### Example: String → Integer
 
-- You can try some more conversions also.
+- `"33"` → `33` (numeric string converts cleanly)
+
+- `"33abc"` → `NaN` (invalid number inside string)
+
+- `""` → `0` (empty string becomes 0)
+
+- `"0"` → `0`
+
+### Boolean → Integer
+
+- `true` → `1`
+
+- `false` → `0`
+
+### Null / Undefined → Integer
+
+- `null` → `0`
+
+- `undefined` → `NaN`
+
+### Special Notes
+
+- `Number(value)` is used for explicit conversion to number.
+
+- Non-numeric strings or `undefined` result in `NaN`.
+
+- `parseInt()` can extract numbers from strings until it hits a non-numeric character, e.g.,`"42px"` → `42`.
+
+**Pro Tip:** Always validate inputs before conversion to avoid unexpected `NaN` results.

@@ -1,55 +1,33 @@
 ## Strings
 
-- Strings are useful for holding data that can be represented in text form. 
+### Overview
 
-- Strings can be created as primitives, from string literals, or as objects, using the `String()` constructor.
+- Strings store and represent text.
 
-- Remember: When using bracket notation for character access, attempting to delete or assign a value to these properties will not succeed. The properties involved are neither writable nor configurable. (See `Object.defineProperty()` for more information.)
+- Can be **primitive** (string literals, `String()` without `new`) or **String objects** (created with `new String()`).
 
-- String literals (denoted by double or single quotes) and strings returned from `String` calls in a non-constructor context (that is, called without using the `new` keyword) are primitive strings. 
+- **Primitive strings** are immutable.
 
-- In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup on the wrapper object instead.
+- When methods are called on primitive strings, JavaScript automatically **wraps them in a String object** (autoboxing).
 
-- There are many methods in the `String` prototype. 
+### Key Points
 
-- Do try them `:)`
+- String primitives: `"foo"`, `String(123)`, `String(true)`
 
-### Some examples
+- String objects: `new String("foo")` → type `"object"`, not `"string"`
+
+- Bracket notation (e.g., `str[0]`) is **read-only** — cannot reassign or delete characters this way.
+
+- String methods are available via `String.prototype`.
+
+- Always prefer **string primitives** over `new String()` for simplicity and performance.
+
+### Example
 
 ```js
-const strPrim = "foo"; // A literal is a string primitive
-const strPrim2 = String(1); // Coerced into the string primitive "1"
-const strPrim3 = String(true); // Coerced into the string primitive "true"
-const strObj = new String(strPrim); // String with new returns a string wrapper object.
+const strPrim = "foo";
+const strObj = new String("foo");
 
 console.log(typeof strPrim); // "string"
-console.log(typeof strPrim2); // "string"
-console.log(typeof strPrim3); // "string"
-console.log(typeof strObj); // "object"
-```
-
-```js
-String.length
-String.charAt()
-String.charCodeAt()
-String.codePointAt()
-String.concat()
-String.at()
-String.[]
-String.slice()
-String.substring()
-String.substr()
-String.toUpperCase()
-String.toLowerCase()
-String.isWellFormed()
-String.toWellFormed()
-String.trim()
-String.trimStart()
-String.trimEnd()
-String.padStart()
-String.padEnd()
-String.repeat()
-String.replace()
-String.replaceAll()
-String.split()
+console.log(typeof strObj);  // "object"
 ```

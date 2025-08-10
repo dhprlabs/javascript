@@ -1,21 +1,53 @@
 ## Variables 
 
-- There are 3 types of variables: let, const and var. 
+### Variable Declarations
 
-- It is prefer to use let and const instead of var. 
+- `let`, `const`, `var` are used to declare variables.
+
+- Prefer using `let` and `const` instead of `var`.
+
+- Reason:
+
+    - Older JavaScript (`var`) had function scope instead of block scope, which caused bugs.
+
+    - `var`-declared variables can be accessed outside the block they were declared in.
+
+### Data Types in JavaScript
+
+- Primitive Types → Stored in stack memory, immutable:
+
+    - `String`
+
+    - `Number`
+
+    - `Boolean`
+
+    - `Symbol`
+
+    - `BigInt`
+
+    - `Null`
+
+    - `Undefined`
+
+- Non-Primitive Types → Stored in heap memory, mutable:
+
+    - `Array`
+    
+    - `Object`
+
+    - `Function`
+
+### Key Notes
+
+- All non-primitive data types have a type of `"object"`.
  
-- The reason is in early javascript of there was issue of block scope & functional scope.
+- Primitives are copied by value, non-primitives are copied by reference.
 
-- So, you can use the var declared variable inside and outside of the function which was a major issue.
+- Use:
 
-## Variable Types 
+    - `const` → For values that won’t be reassigned.
 
-- There are following datatypes: String, Number, Object, Boolean, BigInt, Symbol, Undefined and Null.
+    - `let` → For values that will change.
 
-- There are mainly 2 classification of datatypes : primitive and non-primitive
-
-- Primitive => String, Number, Boolean, Symbol, BigInt, Null and Undefined.
-
-- Non-Primitive => Array, Objects and Functions.   
-
-- All non-primitve datatypes are of `object` datatype. 
+    - Avoid `var` → To prevent scope-related bugs.
