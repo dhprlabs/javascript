@@ -1,53 +1,97 @@
-## Variables 
+# Variables & Data Types
 
-### Variable Declarations
+## Variable Declarations
 
-- `let`, `const`, `var` are used to declare variables.
+JavaScript provides three keywords to declare variables:
 
-- Prefer using `let` and `const` instead of `var`.
+- **`let`** → Block scoped, re-assignable
+- **`const`** → Block scoped, not re-assignable
+- **`var`** → Function scoped (avoid using)
 
-- Reason:
+**Best Practice:** 
+Prefer using `let` and `const` over `var` to avoid scope-related issues.
 
-    - Older JavaScript (`var`) had function scope instead of block scope, which caused bugs.
+### Why Avoid `var`?
 
-    - `var`-declared variables can be accessed outside the block they were declared in.
+- **Scope Problem:** `var` has **function scope** instead of **block scope**.
+- Variables declared with `var` can be **accessed outside the block** they were declared in.
+- Can lead to **unintended behavior** in loops and conditionals.
 
-### Data Types in JavaScript
+Example:
+```javascript
+if (true) {
+    var x = 10;
+}
+console.log(x); // 10 — Accessible outside the block (Problematic)
+```
 
-- Primitive Types → Stored in stack memory, immutable:
+## Data Types in JavaScript
+- JavaScript data types are categorized into primitive and non-primitive.
 
-    - `String`
+- Primitive Types (Stored in Stack, Immutable)
 
-    - `Number`
+1. `String`
+2. `Number`
+3. `Boolean`
+4. `Symbol`
+5. `BigInt`
+6. `Null`
+7. `Undefined`
 
-    - `Boolean`
+**Notes:**
+- Immutable → Value cannot be changed in place.
 
-    - `Symbol`
+- Copied by value → Changing one variable does not affect the other.
 
-    - `BigInt`
+Example:
+```javascript
+Copy
+Edit
+let a = 5;
+let b = a;
+b = 10;
+console.log(a); // 5 (unchanged)
+```
 
-    - `Null`
+## Non-Primitive Types (Stored in Heap, Mutable)
 
-    - `Undefined`
+1. `Array`
+2. `Object`
+3. `Function`
 
-- Non-Primitive Types → Stored in heap memory, mutable:
+**Notes:**
+- Mutable → Can be modified after creation.
 
-    - `Array`
-    
-    - `Object`
+- Copied by reference → Changing one affects all references.
 
-    - `Function`
+Example:
+```javascript
+Copy
+Edit
+let obj1 = { name: "John" };
+let obj2 = obj1;
+obj2.name = "Doe";
+console.log(obj1.name); // "Doe" (changed)
+```
 
-### Key Notes
+## Key Notes
+- All non-primitive data types have a type of "object" (except functions, which return "function" in typeof).
 
-- All non-primitive data types have a type of `"object"`.
- 
-- Primitives are copied by value, non-primitives are copied by reference.
-
-- Use:
+- **Use:**
 
     - `const` → For values that won’t be reassigned.
-
     - `let` → For values that will change.
-
     - Avoid `var` → To prevent scope-related bugs.
+
+## Common Interview Questions
+- What is the difference between `let`, `const`, and `var`?
+
+- Why is `var` considered bad practice?
+
+- How are primitive and non-primitive data types stored in memory?
+
+- What is the difference between "copied by value" and "copied by reference"?
+
+- What will typeof null return and why?
+
+- How does BigInt differ from Number in JavaScript?
