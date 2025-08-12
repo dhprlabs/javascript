@@ -135,3 +135,38 @@ Examples:
 typeof NaN; // "number"
 1 / 0; // Infinity
 -1 / 0; // -Infinity
+```
+
+## 7. Interview Tips & Gotchas
+- NaN is of type "number".
+
+- `0.1 + 0.2 !== 0.3` due to floating-point precision.
+
+    ```javascript
+    0.1 + 0.2; // 0.30000000000000004
+    ```
+
+- Use `.toFixed()` or rounding tricks to handle precision issues.
+
+    ```javascript
+    Number((0.1 + 0.2).toFixed(2)); // 0.3
+    ```
+
+- `parseInt("08")` without radix may behave unexpectedly in older JS (octal parsing).
+
+- Always validate user input before conversion to avoid `NaN`.
+
+## 8. Quick Reference Cheatsheet
+```javascript
+Copy
+Edit
+Number("42");           // 42
+parseInt("42px");       // 42
+parseFloat("42.5px");   // 42.5
+Math.abs(-7);           // 7
+Math.max(1, 5, 3);      // 5
+Math.floor(Math.random() * 5) + 1; // 1–5
+```
+
+## Pro Tip:
+- For interviews, be ready to explain why certain number operations behave unexpectedly, especially around floating-point math and type coercion.
