@@ -1,8 +1,5 @@
 # Number & Math 
 
-This document covers **important concepts, methods, and tricks** related to Numbers and the Math object in JavaScript.  
-It is designed for quick revision and interview preparation.
-
 ## 1. Number Basics
 
 ### Primitive Numbers
