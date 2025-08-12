@@ -1,10 +1,12 @@
-# Number & Math 
+# JavaScript Number & Math Concepts
+
+This document covers **important concepts, methods, and tricks** related to Numbers and the Math object in JavaScript.  
+It is designed for quick revision and interview preparation.
 
 ## 1. Number Basics
 
 ### Primitive Numbers
 - Declared directly as literals.
-
 - Example:
     ```javascript
     const score = 400;
@@ -12,7 +14,6 @@
 
 ### Number Object
 - Created using the `Number` constructor.
-
 - Allows access to more built-in methods.
     ```javascript
     const balance = new Number(100);
@@ -22,9 +23,7 @@
 
 ### 2.1 `toString()`
 - Converts a number into a string.
-
 - Can be used with `.length` to get string length.
-
 - Example:
     ```javascript
     balance.toString().length; // 3
@@ -32,7 +31,6 @@
 
 ### 2.2 `toFixed(n)`
 - Returns a **string** with number rounded to `n` decimal places.
-
 - Example:
     ```javascript
     balance.toFixed(1); // "100.0"
@@ -40,7 +38,6 @@
 
 ### 2.3 `toPrecision(n)`
 - Formats number to `n` **significant digits**.
-
 - Example:
     ```javascript
     (123.8966).toPrecision(4); // "123.9"
@@ -48,12 +45,10 @@
 
 ### 2.4 `toLocaleString([locale])`
 - Formats number according to the given locale.
-
 - Default (US):
     ```javascript
     (1000000).toLocaleString(); // "1,000,000"
     ```
-
 - Indian format:
     ```javascript
     (1000000).toLocaleString('en-IN'); // "10,00,000"
@@ -73,7 +68,6 @@
     ```javascript
     parseInt("42px"); // 42
     ```
-
 - `parseFloat(string)` → Converts string to floating point number.
     ```javascript
     parseFloat("42.5px"); // 42.5
@@ -116,7 +110,6 @@
     ```javascript
     Math.floor(Math.random() * (max - min + 1)) + min;
     ```
-    
 - Example: Between `10` and `20`:
     ```javascript
     Math.floor(Math.random() * (20 - 10 + 1)) + 10;
@@ -138,28 +131,22 @@ typeof NaN; // "number"
 ```
 
 ## 7. Interview Tips & Gotchas
-- NaN is of type "number".
 
+- **`NaN` is of type `"number"`**.
 - `0.1 + 0.2 !== 0.3` due to floating-point precision.
-
     ```javascript
     0.1 + 0.2; // 0.30000000000000004
     ```
-
 - Use `.toFixed()` or rounding tricks to handle precision issues.
-
     ```javascript
     Number((0.1 + 0.2).toFixed(2)); // 0.3
     ```
-
 - `parseInt("08")` without radix may behave unexpectedly in older JS (octal parsing).
-
 - Always validate user input before conversion to avoid `NaN`.
 
 ## 8. Quick Reference Cheatsheet
+
 ```javascript
-Copy
-Edit
 Number("42");           // 42
 parseInt("42px");       // 42
 parseFloat("42.5px");   // 42.5
@@ -168,5 +155,5 @@ Math.max(1, 5, 3);      // 5
 Math.floor(Math.random() * 5) + 1; // 1–5
 ```
 
-## Pro Tip:
-- For interviews, be ready to explain why certain number operations behave unexpectedly, especially around floating-point math and type coercion.
+**Pro Tip:**  
+For interviews, be ready to explain **why** certain number operations behave unexpectedly, especially around **floating-point math** and **type coercion**.
