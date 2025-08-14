@@ -1,33 +1,58 @@
-## Comparisons
+# Comparison Operators & Type Coercion
 
-- **Common task**: Comparing two values happens often in JavaScript.
+## Overview
+JavaScript has two main types of equality checks:
 
-- **Potential confusion**: Different operators (`==` vs `===`) behave differently, especially with type conversion.
+1. **Loose Equality (`==`)**
+   - Compares values **after type conversion**.
+   - Example: `"1" == 1` → `true` (string is converted to number before comparison).
 
-- **TypeScript preference**: Many developers use TypeScript to avoid type-related comparison issues.
+2. **Strict Equality (`===`)**
+   - Compares **value and type**.
+   - Example: `"1" === 1` → `false` (string vs number).
 
-### `==` (Double Equals)
+## Relational Comparisons
+Operators like `>`, `<`, `>=`, `<=` try to **convert both operands** to numbers before comparing.
 
-- Performs **type conversion** before comparison.
+Example:
+```javascript
+"1" > 1   // false → both converted to numbers: 1 > 1 → false
+"1" >= 1  // true  → 1 >= 1 → true
+```
 
-- Special handling for:
+## Special Cases with `null` and `undefined`
+JavaScript treats `null` and `undefined` differently in equality checks:
 
-    - `NaN` → `NaN != NaN`
+| Comparison         | Result   | Reason |
+|--------------------|----------|--------|
+| `null == 0`        | false    | Loose equality does **not** convert null to 0. |
+| `null >= 0`        | true     | Relational comparison converts null → 0. |
+| `null > 0`         | false    | 0 > 0 is false. |
+| `undefined == null`| true     | Loose equality treats them as equal only to each other. |
 
-    - `-0` and `+0` → considered equal
+## Example Outputs
+```javascript
+2 >= 1        // true
+2 == 1        // false
+"1" == 1      // true
+"1" > 1       // false
+null >= 0     // true
+null == 0     // false
+"1" === 1     // false
+1 === 1       // true
+```
 
-- May lead to unexpected results due to implicit conversions.
+## Key Takeaways
+1. **Prefer `===`** for predictable comparisons — avoids type coercion issues.
+2. `null` and `undefined` behave oddly in comparisons:
+   - Only equal to each other with `==`.
+   - Convert to `NaN` or `0` in relational checks.
+3. Strings are converted to numbers in relational comparisons.
+4. `==` can give unexpected results — especially with falsy values like `0`, `""`, `null`, and `undefined`.
 
-### `===` (Triple Equals)
-
-- **Strict comparison** → no type conversion.
-
-- Returns `false` if types differ.
-
-- Still has the same special handling for:
-
-    - `NaN` (always not equal to itself)
-
-    - `-0` and `+0` (considered equal)
-
-**Best Practice**: Prefer `===` for predictable behavior.
+## Interview Questions
+1. What is the difference between `==` and `===`?
+2. Why does `"1" == 1` return `true` but `"1" === 1` return `false`?
+3. Explain why `null >= 0` is `true` but `null == 0` is `false`.
+4. How does JavaScript handle type conversion in relational operators?
+5. Which operator would you use to avoid type coercion bugs, and why?
